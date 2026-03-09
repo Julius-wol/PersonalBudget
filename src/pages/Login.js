@@ -61,7 +61,7 @@ const Login = () => {
         <Container className="d-flex justify-content-center align-items-center" style={{ minHeight: '100vh' }}>
             <Card style={{ width: '400px' }} className="shadow">
                 <Card.Body>
-                    <Card.Title className="text-center mb-4">🔐 Member Login</Card.Title>
+                    <Card.Title className="text-center mb-4">Login</Card.Title>
 
                     {error && <Alert variant="danger">{error}</Alert>}
 
