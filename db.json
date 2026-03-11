@@ -1,21 +1,45 @@
 {
   "users": [
     {
-      "id": 1,
+      "id": "1",
       "username": "DEanhnv",
       "password": "admin123",
       "fullName": "Nguyễn Văn Anh"
     },
     {
-      "id": 2,
+      "id": "2",
       "username": "DETamNT",
       "password": "admin123",
       "fullName": "Nguyễn Thị Tâm"
+    },
+    {
+      "id": "3",
+      "username": "DE123",
+      "password": "123456",
+      "fullName": "Nguyễn Thị Thanh"
+    },
+    {
+      "id": "4",
+      "username": "DE1234",
+      "password": "123456",
+      "fullName": "Nguyễn Văn A"
+    },
+    {
+      "id": "5743",
+      "username": "DE190160",
+      "password": "123456",
+      "fullName": "Nguyễn Khánh Huyền"
+    },
+    {
+      "id": "30c0",
+      "username": "DE190161",
+      "password": "123456",
+      "fullName": "Nguyễn Huyền"
     }
   ],
   "expenses": [
     {
-      "id": 1,
+      "id": "1",
       "userId": 1,
       "name": "Lunch",
       "amount": "85000",
@@ -23,15 +47,15 @@
       "date": "2025-10-02"
     },
     {
-      "id": 2,
+      "id": "2",
       "userId": 1,
       "name": "Electricity Bill",
-      "amount": 450000,
+      "amount": 850000,
       "category": "Utilities",
       "date": "2025-10-03"
     },
     {
-      "id": 3,
+      "id": "3",
       "userId": 1,
       "name": "Cinema",
       "amount": 120000,
@@ -39,7 +63,7 @@
       "date": "2025-10-05"
     },
     {
-      "id": 4,
+      "id": "4",
       "userId": 1,
       "name": "Cafe",
       "amount": 65000,
@@ -47,7 +71,7 @@
       "date": "2025-10-07"
     },
     {
-      "id": 5,
+      "id": "5",
       "userId": 2,
       "name": "Breakfast",
       "amount": 40000,
@@ -55,7 +79,7 @@
       "date": "2025-10-01"
     },
     {
-      "id": 6,
+      "id": "6",
       "userId": 2,
       "name": "Internet Bill",
       "amount": 250000,

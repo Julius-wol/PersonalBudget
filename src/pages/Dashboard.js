@@ -7,8 +7,11 @@ import { Table, Card, Row, Col, Container } from 'react-bootstrap';
 
 const Dashboard = () => {
     const { state, dispatch } = useContext(BudgetContext);
+
     const [filter, setFilter] = useState('');
     const [editItem, setEditItem] = useState(null);
+    const [startDate, setStartDate] = useState('');
+    const [endDate, setEndDate] = useState('');
 
     useEffect(() => {
         if (state.user) {
@@ -24,9 +27,19 @@ const Dashboard = () => {
         }
     };
 
-    const filteredExpenses = state.expenses.filter(e =>
+
+    // Lọc theo category
+    let filteredExpenses = state.expenses.filter(e =>
         e.category.toLowerCase().includes(filter.toLowerCase())
     );
+
+    // Lọc theo ngày nếu có chọn
+    if (startDate) {
+        filteredExpenses = filteredExpenses.filter(e => new Date(e.date) >= new Date(startDate));
+    }
+    if (endDate) {
+        filteredExpenses = filteredExpenses.filter(e => new Date(e.date) <= new Date(endDate));
+    }
 
     const total = filteredExpenses.reduce((sum, item) => sum + Number(item.amount), 0);
 
@@ -44,7 +57,30 @@ const Dashboard = () => {
                     <Col md={6}>
                         <Card className="shadow p-3">
                             <h4>Filter</h4>
-                            <input className="form-control" placeholder="Search by Category..." onChange={e => setFilter(e.target.value)} />
+                            <div className="d-flex gap-2 flex-wrap">
+                                <input
+                                    className="form-control"
+                                    style={{ maxWidth: 180 }}
+                                    placeholder="Search by Category..."
+                                    onChange={e => setFilter(e.target.value)}
+                                />
+                                <input
+                                    type="date"
+                                    className="form-control"
+                                    style={{ maxWidth: 150 }}
+                                    value={startDate}
+                                    onChange={e => setStartDate(e.target.value)}
+                                    placeholder="Từ ngày"
+                                />
+                                <input
+                                    type="date"
+                                    className="form-control"
+                                    style={{ maxWidth: 150 }}
+                                    value={endDate}
+                                    onChange={e => setEndDate(e.target.value)}
+                                    placeholder="Đến ngày"
+                                />
+                            </div>
                         </Card>
                     </Col>
                 </Row>

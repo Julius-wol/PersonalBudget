@@ -50,3 +50,6 @@ ExpenseForm.propTypes = {
 };
 
 export default ExpenseForm;
+
+// câu 1: Thêm chức năng register user & kiểm  tra password k quá 6 kí tự 
+// câu 2: Hiển thị tất cả các chi tiêu từ ngày A đến ngày B vượt quá 500k 
